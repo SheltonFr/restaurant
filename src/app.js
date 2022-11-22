@@ -1,4 +1,5 @@
 import loadHome from "./home";
+import loadMenu from "./menu";
 
 const createHeader = () => {
     const header = document.createElement('header');
@@ -23,6 +24,7 @@ const createNav = () => {
 
     const homeButton = document.createElement('button');
     homeButton.classList.add('button-nav');
+    homeButton.setAttribute('id', 'nav-home-btn');
     homeButton.textContent = 'Home';
     homeButton.addEventListener('click', () => {
         if (homeButton.classList.contains('active')) return;
@@ -37,12 +39,13 @@ const createNav = () => {
     menuButton.addEventListener('click', () => {
         if (menuButton.classList.contains('active')) return;
         setActiveButton(menuButton);
+        loadMenu();
     });
 
 
     const contactButton = document.createElement('button');
     contactButton.classList.add('button-nav');
-    contactButton.textContent = 'Home';
+    contactButton.textContent = 'Contact';
     contactButton.addEventListener('click', () => {
         if (contactButton.classList.contains('active')) return;
         setActiveButton(contactButton);
@@ -112,6 +115,10 @@ function initApp() {
     content.appendChild(createHeader());
     content.appendChild(createMain());
     content.appendChild(createFooter());
+
+
+    setActiveButton(document.querySelector("#nav-home-btn"));
+    loadHome();
 
 }
 

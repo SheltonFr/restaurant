@@ -23,7 +23,7 @@ function createParagraph(text) {
 
 function loadHome () {
     const main = document.querySelector('#main');
-    main.textContent = '';
+    main.innerHTML = '';
     main.appendChild(creatHome());
 }
 
