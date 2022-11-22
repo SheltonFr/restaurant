@@ -1,0 +1,25 @@
+:root {
+    --font-color: #eee;
+    --font-color-dark: #aaa;
+    --border-color: #222;
+    --background-light: rgba(0, 0, 0, 0.6);
+    --background-light-hover: rgba(99, 99, 99, 0.4);
+    --background-dark: rgba(0, 0, 0, 0.9);
+
+}
+
+*,
+*::before,
+*::after {
+    block-size: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-image: url('imgs/background.jpg');
+    background-size: cover;
+    /* background-attachment: fixed; */
+    background-repeat: no-repeat;
+}
